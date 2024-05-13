@@ -1,0 +1,320 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html{
+  margin: 0px;
+  
+}
+.hdr {
+  width: 100%;
+  background-color: rgb(35, 153, 108);
+
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.hdr img {
+  margin-left: 50px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.hdr button {
+  color: white;
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 10px 10px;
+  margin-right: 70px;
+}
+
+.hr {
+  margin-top: 10px;
+}
+
+body {
+}
+
+.hamburguer {
+  display: none;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Animação do ícone de hambúrguer quando clicado */
+.hamburguer.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburguer.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* __________________________________________SECTION BR______________________________________________________________ */
+
+.br {
+  background-color: white;
+  margin-left: 250px;
+  width: 900px;
+  height: 200px;
+  background-color: rgb(35, 153, 108);
+  border: 0.5px solid black;
+  box-shadow: black 0px 1px 20px 0px;
+  margin-top: 50px;
+  border-radius: 5px;
+  border: none;
+  padding-top:1px ;
+}
+
+.br a {
+ border: none;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+  color: white;
+  margin-left: 150px;
+  text-decoration: none;
+  width: 600px;
+  margin-top: 65px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  background-color: rgb(0, 0, 0);
+}
+
+/* _____________________________     mnOne           ________________________________________________________ */
+
+.mnOne {
+  display: flex;
+}
+
+.mnOne p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.p1 {
+  color: rgb(0, 199, 222); /* Azul-turquesa claro */
+  font-weight: bolder;
+  font-size: 56px;
+}
+
+.p2 {
+  font-weight: bolder;
+  font-size: 50px;
+  color: rgb(126, 255, 0); /* Verde-menta claro */
+}
+
+.p3 {
+  color: rgb(60, 179, 113); /* Azul-turquesa médio */
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+
+/* _____________________________     PLAY           ________________________________________________________ */
+
+.play{
+  width: 50%;
+  margin-top: 150px;
+}
+
+.play img{
+
+}
+
+
+
+
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+
+/*___________________________________________________ CARROSSEL____________________________________________________ */
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  width: 100%;
+}
+
+.carousel {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.carousel-slides {
+  display: flex;
+  position: relative;
+  width: 400%;
+}
+
+.carousel-slides input[type="radio"] {
+  display: none;
+}
+
+.slide-imgs {
+  transition: 2s;
+  width: 25%;
+}
+
+.slide-imgs img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 500px;
+}
+
+.carousel-navigation {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 7%;
+  left: 6.25%;
+  width: 12.5%;
+}
+
+.carousel-btn {
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 500ms;
+}
+
+.carousel-btn:not(:last-child) {
+  margin-right: 10%;
+}
+
+.carousel-btn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .first-img {
+  margin-left: 0;
+}
+#radio2:checked ~ .first-img {
+  margin-left: -25%;
+}
+#radio3:checked ~ .first-img {
+  margin-left: -50%;
+}
+#radio4:checked ~ .first-img {
+  margin-left: -75%;
+}
+
+#radio1:checked ~ .carousel-navigation > .btn1 {
+  background-color: white;
+}
+#radio2:checked ~ .carousel-navigation > .btn2 {
+  background-color: white;
+}
+#radio3:checked ~ .carousel-navigation > .btn3 {
+  background-color: white;
+}
+#radio4:checked ~ .carousel-navigation > .btn4 {
+  background-color: white;
+}
+
+/*___________________________________________________ NAVEGACAO 01____________________________________________________ */
+
+.navegOne {
+  width: 100%;
+  height: 900px;
+  background-color: white;
+}
+
+/*___________________________________________________ MEDIA QUERY____________________________________________________ */
+
+/* Media queries para smartphones */
+@media (max-width: 320px) {
+  /* Regras para smartphones pequenos */
+  .hdr{
+ 
+  }
+  .bar{
+
+  }
+
+  main {
+    
+  }
+
+
+
+}
+
+@media (max-width: 480px) {
+  /* Regras para smartphones médios */
+}
+
+@media (max-width: 768px) {
+  /* Regras para smartphones grandes */
+}
+
+/* Media queries para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Regras para tablets */
+}
+
+/* Media queries para desktops */
+@media (min-width: 1025px) {
+  /* Regras para desktops */
+}
+
+/* Estilo padrão para telas menores */
+
+@media screen and (max-width: 993px) {
+  .hr {
+    display: none;
+  }
+
+  .hamburguer {
+    float: right;
+    display: inline-block; /* Mostra o ícone em telas menores */
+    cursor: pointer;
+    margin-right: 30px;
+    position: relative;
+    bottom: 67px;
+  }
+  .slide-imgs img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+    height: 300px;
+  }
+  .navegOne img {
+    width: 100%;
+    height: 400px;
+  }
+
+
+}
+
+@media screen {
+}
